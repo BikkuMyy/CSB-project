@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Events</title>
+    </head>
+    <body>
+
+        <h1>Choose event to sign up to:</h1>
+
+        <ul>
+            <li th:each="event : ${events}">
+                <a th:href="@{/form/{eventname}(eventname=${event.name})}" th:text="${event.name}">event</a> 
+            </li>
+        </ul>
+
+    </body>
+</html>

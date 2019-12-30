@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+
+        <h1>Register new user</h1>
+        <div th:if="${param.error}" class="alert alert-error">    
+            Pick another username.
+        </div>
+        <form action="#" th:action="@{/register}" method="POST">
+            <p><label for="username">Username</label>: <input type="text" name="username" id="username"/></p>
+            <p><label for="pwd">Password</label>: <input type="password" name="pwd" id="pwd"/></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+
+        <p></p>
+    </body>
+</html>
